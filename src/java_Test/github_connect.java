@@ -5,29 +5,41 @@ import java.util.Scanner;
 public class github_connect {
 
 	public static void main(String[] args) {
+		int day = 0;
+		int month;
+		
 		Scanner scanner = new Scanner(System.in);
-
-		int val = scanner.nextInt();
-		char grade;
-
-		if (val > 100) {
-			System.out.println("input error");
-			return;
+		
+		month = scanner.nextInt();
+		
+		switch(month) {
+		case 1:
+		case 3:
+		case 5:
+		case 7:
+		case 8:
+		case 10:
+		case 12:
+			day = 31;
+			break;
+			
+		case 4:
+		case 6:
+		case 9:
+		case 11:
+			day = 30;
+			break;
+			
+		case 2:
+			day = 28;
+			break;
+		default:
+			System.out.println("input month Error");
+			day = 0;
+			break;
 		}
-
-		if (val >= 90) {
-			grade = 'A';
-		} else if (val >= 80) {
-			grade = 'B';
-		} else if (val >= 70) {
-			grade = 'C';
-		} else if (val >= 60) {
-			grade = 'D';
-		} else {
-			grade = 'F';
-		}
-
-		System.out.println("score : " + val + " grade : " + grade);
+		
+		System.out.println(day);
 
 	}
 
