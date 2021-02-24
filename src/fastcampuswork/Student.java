@@ -1,19 +1,31 @@
 package fastcampuswork;
 
+import java.util.ArrayList;
+
 public class Student {
-	
-	public int studentID;
+
+	private int studentID;
 	public String studentName;
-	public String address;
-	
-	public Student(int studentID, String studentName, String address) {
+	ArrayList<Book> books;
+
+	public Student(int studentID, String studentName) {
 		this.studentID = studentID;
 		this.studentName = studentName;
-		this.address = address;
+
+		books = new ArrayList<Book>();
 	}
-	
+
+	public void addBook(String bookName, String author) {
+		books.add(new Book(bookName, author));
+	}
+
 	public void showStudentInfo() {
-		System.out.println(this.studentName + ", " + this.address);
+		String booknames = "";
+		for (Book book : books) {
+			booknames += book.getBookName() + " ";
+		}
+		System.out.println(studentName + " 학생이 읽은 책은 : " + booknames + "입니다");
+
 	}
 
 	public int getStudentID() {
@@ -30,13 +42,5 @@ public class Student {
 
 	public void setStudentName(String studentName) {
 		this.studentName = studentName;
-	}
-
-	public String getAddress() {
-		return address;
-	}
-
-	public void setAddress(String address) {
-		this.address = address;
 	}
 }

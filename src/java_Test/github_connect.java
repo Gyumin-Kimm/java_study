@@ -6,83 +6,62 @@ public class github_connect {
 
 	public static void main(String[] args) {
 		github_connect gc = new github_connect();
-		gc.print_dia();
-		gc.ifelseswitch_func();
-	}
-
-	public void print_dia() {
-		Scanner sc = new Scanner(System.in);
-
-		System.out.print("홀수 숫자 입력 : ");
-		int line = sc.nextInt();
-		int space = line / 2 + 1;
-		int star = 1;
-
-		for (int i = 0; i < line; i++) {
-			for (int j = 0; j < space; j++) {
-				System.out.print(" ");
-			}
-
-			for (int j = 0; j < star; j++) {
-				System.out.print("*");
-			}
-
-			for (int j = 0; j < space; j++) {
-				System.out.print(" ");
-			}
-
-			System.out.println();
-
-			if (i < line / 2) {
-				space -= 1;
-				star += 2;
-			} else {
-				space += 1;
-				star -= 2;
-			}
+		
+		Tester[] tt1 = new Tester[5];
+		Tester[] tt2 = new Tester[5];
+		Tester[] tt3 = new Tester[5];
+		
+		for(int i =0;i<tt1.length;i++) {
+			tt1[i] = new Tester(i+1, "Name"+i);
 		}
-	}
-
-	public void ifelseswitch_func() {
-		char op = '/';
-		int num1 = 10;
-		int num2 = 5;
-
-		// switch
-		switch (op) {
-		case '+':
-			System.out.println(num1 + num2);
-			break;
-		case '-':
-			System.out.println(num1 - num2);
-			break;
-		case '*':
-			System.out.println(num1 * num2);
-			break;
-		case '/':
-			if (num2 == 0) {
-				System.out.println("cannot divide zero");
-			} else {
-				System.out.println(num1 / num2);
-			}
-			break;
-		default:
-			break;
+		
+		
+		System.out.println("tt1=============");
+		for(int i =0;i<tt1.length;i++) {
+			tt1[i].printTester();
 		}
-
-//		//if-else
-		if (op == '+') {
-			System.out.println(num1 + num2);
-		} else if (op == '-') {
-			System.out.println(num1 - num2);
-		} else if (op == '*') {
-			System.out.println(num1 * num2);
-		} else if (op == '/') {
-			if (num2 == 0) {
-				System.out.println("cannot divide zero");
-			} else {
-				System.out.println(num1 / num2);
-			}
+		
+		System.arraycopy(tt1, 0, tt2, 0, tt1.length);
+		
+		System.out.println("tt2=============");
+		for(int i =0;i<tt2.length;i++) {
+			tt2[i].printTester();
+		}
+		
+//		for(int i =0;i<tt3.length;i++) {
+//			tt3[i] = new Tester();
+//		}
+		
+		// 객체 생성을 기본적으로 해주는듯.
+		System.arraycopy(tt1, 0, tt3, 0, tt1.length);
+//		for(int i =0; i< tt1.length; i++) {
+//			tt3[i].testerID = tt1[i].getTesterID();
+//			tt3[i].testerName = tt1[i].getTesterName();
+//		}
+		
+		System.out.println("tt3=============");
+		for(int i =0;i<tt3.length;i++) {
+			tt3[i].printTester();
+		}
+		
+		System.out.println("edit tt1==============================");
+		tt1[0].testerID = 10;
+		tt1[0].testerName = "editName10";
+		
+		
+		System.out.println("tt1=============");
+		for(int i =0;i<tt1.length;i++) {
+			tt1[i].printTester();
+		}
+		
+		System.out.println("tt2=============");
+		for(int i =0;i<tt2.length;i++) {
+			tt2[i].printTester();
+		}
+		
+		System.out.println("tt3=============");
+		for(int i =0;i<tt3.length;i++) {
+			tt3[i].printTester();
 		}
 	}
 

@@ -5,13 +5,36 @@ import java.util.Scanner;
 public class fastCampusWork {
 
 	public static void main(String[] args) {
-		CardCompany company = CardCompany.getInstance();
+		fastCampusWork fcw = new fastCampusWork();
 		
-		Card myCard = company.createCard();
-		Card yourCard = company.createCard();
+		Student Lee = new Student(1001, "Lee");
+		Lee.addBook("태백산맥1", "조정래");
+		Lee.addBook("태백산맥2", "조정래");
+		Student Kim = new Student(1002, "Kim");
+		Kim.addBook("토지1", "박경리");
+		Kim.addBook("토지2", "박경리");
+		Kim.addBook("토지3", "박경리");
+		Student Cho = new Student(1003, "Cho");
+		Cho.addBook("해리포터1", "조앤 롤링");
+		Cho.addBook("해리포터2", "조앤 롤링");
+		Cho.addBook("해리포터3", "조앤 롤링");
+		Cho.addBook("해리포터4", "조앤 롤링");
+		Cho.addBook("해리포터5", "조앤 롤링");
+		Cho.addBook("해리포터6", "조앤 롤링");
 		
-		System.out.println(myCard.getCardNumber());
-		System.out.println(yourCard.getCardNumber());
+		Lee.showStudentInfo();
+		Kim.showStudentInfo();
+		Cho.showStudentInfo();
+		
+//		fcw.printArrayChar();
+		
+//		CardCompany company = CardCompany.getInstance();
+//		
+//		Card myCard = company.createCard();
+//		Card yourCard = company.createCard();
+//		
+//		System.out.println(myCard.getCardNumber());
+//		System.out.println(yourCard.getCardNumber());
 		
 //		MyDate md = new MyDate(30, 12, 2020);
 //		System.out.println(md.isValid());
@@ -24,14 +47,23 @@ public class fastCampusWork {
 //		ifelseswitch_func();
 	}
 	
-	public static void printMaxMinValue() {
+	public void printArrayChar() {
+		char[] chArr = new char[26];
+		for(int i=0, c='A';i<chArr.length;i++,c++) {
+			chArr[i] = (char) c;
+		}
+		
+		System.out.println(chArr);
+	}
+	
+	public void printMaxMinValue() {
 		System.out.println("int max value : " + Integer.MAX_VALUE);
 		System.out.println("int min value : " + Integer.MIN_VALUE);
 		System.out.println("long max value : " + Long.MAX_VALUE);
 		System.out.println("long min value : " + Long.MIN_VALUE);
 	}
 
-	public static void print_dia() {
+	public void print_dia() {
 		Scanner sc = new Scanner(System.in);
 
 		System.out.print("홀수 숫자 입력 : ");
@@ -66,7 +98,7 @@ public class fastCampusWork {
 		}
 	}
 
-	public static void ifelseswitch_func() {
+	public void ifelseswitch_func() {
 		char op = '/';
 		int num1 = 10;
 		int num2 = 5;
