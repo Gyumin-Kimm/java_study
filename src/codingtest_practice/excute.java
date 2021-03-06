@@ -2,16 +2,57 @@ package codingtest_practice;
 
 import java.util.Arrays;
 
+import codingtest_practice.Hash.phoneNumberList;
+import codingtest_practice.basic.cpTest;
+import codingtest_practice.greedy.makeBigNumber;
+import codingtest_practice.heap.diskController;
+import codingtest_practice.heap.moreSpicy;
+
 public class excute {
 
 	public static void main(String[] args) {
+		cpTest ct = new cpTest();
+//		int[] ct1 = {1,3,2,4};
+//		int[] ct2 = {3,1,2};
+		int[] ct1 = {24,22,20,10,5,3,2,1};
+		int[] ct2 = {1300000000,700000000,668239490,618239490,568239490,568239486,518239486,157658638,157658634,100000000,100};
+		
+		System.out.println(ct.solution2(3,ct1));
+		System.out.println("----------------");
+		System.out.println(ct.solution2(2,ct2));
+//		phoneNumberList pnl = new phoneNumberList();
+//		String[] pnl1 = {"119", "97674223", "1195524421"};
+//		String[] pnl2 = {"123", "456", "789"};
+//		String[] pnl3 = {"12", "123", "1235", "567", "88"};
+//		System.out.println(pnl.solution(pnl1));
+//		System.out.println("--------------------");
+//		System.out.println(pnl.solution(pnl2));
+//		System.out.println("--------------------");
+//		System.out.println(pnl.solution(pnl3));
+		
+//		diskController dc = new diskController();
+//		int[][] dc1 = {{0, 3}, {1, 9}, {2, 6}};
+//		int[][] dc2 = {{3, 4}, {1, 10}, {10, 3}};
+//		System.out.println(dc.solution(dc1));
+//		System.out.println("--------------------");
+//		System.out.println(dc.solution(dc2));
+		
+//		moreSpicy ms = new moreSpicy();
+//		int[] ms1 = {1, 2, 3, 9, 10, 12};
+//		System.out.println(ms.solution(ms1, 7));
+		
+//		makeBigNumber mbn = new makeBigNumber();
+//		System.out.println(mbn.solution("1924", 2));
+//		System.out.println(mbn.solution("1231234", 3));
+//		System.out.println(mbn.solution("4177252841", 4));
+		
 //		String[] gt1 = {"Cardiology", "Orthopaedics", "Neurology", "Cardiology", "Orthopaedics", "Cardiology"};
 //		int[] gt1 = {0, 1, 1, 1, 0, 1, 1, 1, 0, 1};
 		
-		temp gt = new temp();
+//		temp gt = new temp();
 //		System.out.println(temp.solution(gt1));
-		System.out.println(temp.solution(1,8,3,2));
-		System.out.println(temp.solution(2,3,3,2));
+//		System.out.println(temp.solution(1,8,3,2));
+//		System.out.println(temp.solution(2,3,3,2));
 		
 //		int[] gt1 = { 1, 3, 2, 4, 2 };
 ////		int[] gt2 = { 1, 2, 3, 4, 5 };

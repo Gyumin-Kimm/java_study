@@ -1,68 +1,72 @@
 package java_Test;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class github_connect {
 
 	public static void main(String[] args) {
 		github_connect gc = new github_connect();
-		
-		Tester[] tt1 = new Tester[5];
-		Tester[] tt2 = new Tester[5];
-		Tester[] tt3 = new Tester[5];
-		
-		for(int i =0;i<tt1.length;i++) {
-			tt1[i] = new Tester(i+1, "Name"+i);
+
+		int[] a1 = { 4, 11 };
+		int[] a2 = { 9 };
+		System.out.println(gc.solution(11, a1, 1));
+		System.out.println("---------------------");
+		System.out.println(gc.solution(16, a2, 2));
+	}
+
+	public int solution(int n, int[] stations, int w) {
+		int answer = 0;
+		int range = 0;
+		boolean flag = false;
+		ArrayList<Integer> arr = new ArrayList<Integer>();
+		for (int i = 0; i < stations.length; i++) {
+			arr.add(stations[i]);
 		}
-		
-		
-		System.out.println("tt1=============");
-		for(int i =0;i<tt1.length;i++) {
-			tt1[i].printTester();
+
+		for (int i = 1; i <= n - w; i++) {
+			// station check
+			for (int j : arr) {
+				if (i > j + w)
+					continue;
+
+				if (i == j) {
+					i += w;
+					flag = true;
+					break;
+				}
+
+				System.out.println("i:"+i+" j:"+j + ", abs:" + Math.abs(j - i) + ", range:" + range);
+				if (Math.abs(j - i) <= w) {
+					flag = true;
+					break;
+				}
+			}
+
+			if (flag) {
+				range = 0;
+			}
+			else {
+				if (range >= w) {
+					arr.add(i);
+					answer++;
+					range = 0;
+				}
+				else {
+					range++;
+				}
+			}
+
+			flag = false;
+
+			for (int j : arr) {
+				System.out.print(j + ",");
+			}
+			System.out.println();
+
 		}
-		
-		System.arraycopy(tt1, 0, tt2, 0, tt1.length);
-		
-		System.out.println("tt2=============");
-		for(int i =0;i<tt2.length;i++) {
-			tt2[i].printTester();
-		}
-		
-//		for(int i =0;i<tt3.length;i++) {
-//			tt3[i] = new Tester();
-//		}
-		
-		// 객체 생성을 기본적으로 해주는듯.
-		System.arraycopy(tt1, 0, tt3, 0, tt1.length);
-//		for(int i =0; i< tt1.length; i++) {
-//			tt3[i].testerID = tt1[i].getTesterID();
-//			tt3[i].testerName = tt1[i].getTesterName();
-//		}
-		
-		System.out.println("tt3=============");
-		for(int i =0;i<tt3.length;i++) {
-			tt3[i].printTester();
-		}
-		
-		System.out.println("edit tt1==============================");
-		tt1[0].testerID = 10;
-		tt1[0].testerName = "editName10";
-		
-		
-		System.out.println("tt1=============");
-		for(int i =0;i<tt1.length;i++) {
-			tt1[i].printTester();
-		}
-		
-		System.out.println("tt2=============");
-		for(int i =0;i<tt2.length;i++) {
-			tt2[i].printTester();
-		}
-		
-		System.out.println("tt3=============");
-		for(int i =0;i<tt3.length;i++) {
-			tt3[i].printTester();
-		}
+
+		return answer;
 	}
 
 }

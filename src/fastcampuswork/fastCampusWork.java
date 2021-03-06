@@ -6,25 +6,28 @@ public class fastCampusWork {
 
 	public static void main(String[] args) {
 		fastCampusWork fcw = new fastCampusWork();
+		Book book = Book.getInstance();
 		
-		Student Lee = new Student(1001, "Lee");
-		Lee.addBook("태백산맥1", "조정래");
-		Lee.addBook("태백산맥2", "조정래");
-		Student Kim = new Student(1002, "Kim");
-		Kim.addBook("토지1", "박경리");
-		Kim.addBook("토지2", "박경리");
-		Kim.addBook("토지3", "박경리");
-		Student Cho = new Student(1003, "Cho");
-		Cho.addBook("해리포터1", "조앤 롤링");
-		Cho.addBook("해리포터2", "조앤 롤링");
-		Cho.addBook("해리포터3", "조앤 롤링");
-		Cho.addBook("해리포터4", "조앤 롤링");
-		Cho.addBook("해리포터5", "조앤 롤링");
-		Cho.addBook("해리포터6", "조앤 롤링");
+		System.out.println(book);
 		
-		Lee.showStudentInfo();
-		Kim.showStudentInfo();
-		Cho.showStudentInfo();
+//		Student Lee = new Student(1001, "Lee");
+//		Lee.addBook("태백산맥1", "조정래");
+//		Lee.addBook("태백산맥2", "조정래");
+//		Student Kim = new Student(1002, "Kim");
+//		Kim.addBook("토지1", "박경리");
+//		Kim.addBook("토지2", "박경리");
+//		Kim.addBook("토지3", "박경리");
+//		Student Cho = new Student(1003, "Cho");
+//		Cho.addBook("해리포터1", "조앤 롤링");
+//		Cho.addBook("해리포터2", "조앤 롤링");
+//		Cho.addBook("해리포터3", "조앤 롤링");
+//		Cho.addBook("해리포터4", "조앤 롤링");
+//		Cho.addBook("해리포터5", "조앤 롤링");
+//		Cho.addBook("해리포터6", "조앤 롤링");
+//		
+//		Lee.showStudentInfo();
+//		Kim.showStudentInfo();
+//		Cho.showStudentInfo();
 		
 //		fcw.printArrayChar();
 		
@@ -46,16 +49,16 @@ public class fastCampusWork {
 //		print_dia();
 //		ifelseswitch_func();
 	}
-	
+
 	public void printArrayChar() {
 		char[] chArr = new char[26];
-		for(int i=0, c='A';i<chArr.length;i++,c++) {
+		for (int i = 0, c = 'A'; i < chArr.length; i++, c++) {
 			chArr[i] = (char) c;
 		}
-		
+
 		System.out.println(chArr);
 	}
-	
+
 	public void printMaxMinValue() {
 		System.out.println("int max value : " + Integer.MAX_VALUE);
 		System.out.println("int min value : " + Integer.MIN_VALUE);
@@ -70,7 +73,7 @@ public class fastCampusWork {
 		int line = sc.nextInt();
 		int space = line / 2 + 1;
 		int star = 1;
-		
+
 		sc.close();
 
 		for (int i = 0; i < line; i++) {
