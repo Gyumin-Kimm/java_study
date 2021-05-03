@@ -1,14 +1,45 @@
 package fastcampuswork;
 
+import java.io.BufferedInputStream;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.ByteArrayInputStream;
+import java.io.FileInputStream;
+import java.io.FileWriter;
+import java.io.FilterInputStream;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.io.UnsupportedEncodingException;
+import java.io.Writer;
+import java.net.URLEncoder;
 import java.util.Scanner;
 
 public class fastCampusWork {
 
 	public static void main(String[] args) {
-		fastCampusWork fcw = new fastCampusWork();
-		Book book = Book.getInstance();
+		try {
+			String url = URLEncoder.encode("http://www.fastcampus.co.kr/", "UTF-8");
+			System.out.println(url);
+		}catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+		}
 		
-		System.out.println(book);
+		BufferedReader b1 = new BufferedReader(new InputStreamReader(System.in));
+		InputStreamReader b2 = new InputStreamReader(System.in);
+		BufferedInputStream b4 = new BufferedInputStream(System.in);
+		InputStream a1;
+		FileInputStream a2;
+		ByteArrayInputStream a3;
+		FilterInputStream a4;
+		Writer c1;
+		FileWriter c2;
+		OutputStreamWriter c3;
+		BufferedWriter c4;
+//		fastCampusWork fcw = new fastCampusWork();
+//		Book book = Book.getInstance();
+//		
+//		System.out.println(book);
 		
 //		Student Lee = new Student(1001, "Lee");
 //		Lee.addBook("태백산맥1", "조정래");

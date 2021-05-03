@@ -4,6 +4,10 @@ import java.util.Arrays;
 
 import codingtest_practice.Hash.phoneNumberList;
 import codingtest_practice.basic.cpTest;
+import codingtest_practice.basic.dailyEvent;
+import codingtest_practice.basic.giftCard;
+import codingtest_practice.basic.robotMake;
+import codingtest_practice.basic.train;
 import codingtest_practice.greedy.makeBigNumber;
 import codingtest_practice.heap.diskController;
 import codingtest_practice.heap.moreSpicy;
@@ -11,15 +15,51 @@ import codingtest_practice.heap.moreSpicy;
 public class excute {
 
 	public static void main(String[] args) {
-		cpTest ct = new cpTest();
+		dailyEvent de = new dailyEvent();
+		int[] de1 = {5, 1, 9, 8, 10, 5};
+		int[] de2 = {10, 1, 10, 1, 1, 4, 3, 10};
+		System.out.println(de.solution(de1,3));
+		System.out.println("----------------");
+		System.out.println(de.solution(de2,6));
+		
+//		giftCard gc = new giftCard();
+//		int[] gc1 = {4, 5, 3, 2, 1};
+//		int[] gc11 = {2, 4, 4, 5, 1};
+//		int[] gc2 = {5, 4, 5, 4, 5};
+//		int[] gc22 = {1, 2, 3, 5, 4};
+//		System.out.println(gc.solution(gc1,gc11));
+//		System.out.println("----------------");
+//		System.out.println(gc.solution(gc2,gc22));
+//		System.out.println("----------------");
+		
+//		robotMake rm = new robotMake();
+//		int[][] rm1 = { { 1, 0, 0 }, {1, 1, 0}, {1, 1, 0}, {1, 0, 1}, {1, 1, 0}, {0, 1, 1} };
+//		System.out.println(rm.solution(rm1,2));
+//		System.out.println("----------------");
+		
+//		train tn = new train();
+//		int[] tn1 = {1,1,1,1,1,1};
+//		int[][] tn11 = {{1,2},{1,3},{1,4},{3,5},{3,6}};
+//		int[] tn2 = {2,1,2,2};
+//		int[][] tn22 = {{1,2},{1,3},{2,4}};
+//		int[] tn3 = {1,1,2,3,4};
+//		int[][] tn33 = {{1,2},{1,3},{1,4},{1,5}};
+//		System.out.println(tn.solution(6,tn1,tn11));
+//		System.out.println("----------------");
+//		System.out.println(tn.solution(4,tn2,tn22));
+//		System.out.println("----------------");
+//		System.out.println(tn.solution(5,tn3,tn33));
+		
+		
+//		cpTest ct = new cpTest();
 //		int[] ct1 = {1,3,2,4};
 //		int[] ct2 = {3,1,2};
-		int[] ct1 = {24,22,20,10,5,3,2,1};
-		int[] ct2 = {1300000000,700000000,668239490,618239490,568239490,568239486,518239486,157658638,157658634,100000000,100};
-		
-		System.out.println(ct.solution2(3,ct1));
-		System.out.println("----------------");
-		System.out.println(ct.solution2(2,ct2));
+//		int[] ct1 = {24,22,20,10,5,3,2,1};
+//		int[] ct2 = {1300000000,700000000,668239490,618239490,568239490,568239486,518239486,157658638,157658634,100000000,100};
+//		
+//		System.out.println(ct.solution2(3,ct1));
+//		System.out.println("----------------");
+//		System.out.println(ct.solution2(2,ct2));
 //		phoneNumberList pnl = new phoneNumberList();
 //		String[] pnl1 = {"119", "97674223", "1195524421"};
 //		String[] pnl2 = {"123", "456", "789"};
