@@ -2,12 +2,18 @@ package codingtest_practice;
 
 import java.util.Arrays;
 
+import codingtest_practice.Hash.dupScore;
+import codingtest_practice.Hash.giveCoupon;
 import codingtest_practice.Hash.phoneNumberList;
+import codingtest_practice.Hash.putNumberMatrix;
+import codingtest_practice.Hash.stringtoInteger;
 import codingtest_practice.basic.cpTest;
 import codingtest_practice.basic.dailyEvent;
 import codingtest_practice.basic.giftCard;
+import codingtest_practice.basic.newId;
 import codingtest_practice.basic.robotMake;
 import codingtest_practice.basic.train;
+import codingtest_practice.greedy.lottoBestWorst;
 import codingtest_practice.greedy.makeBigNumber;
 import codingtest_practice.heap.diskController;
 import codingtest_practice.heap.moreSpicy;
@@ -15,12 +21,85 @@ import codingtest_practice.heap.moreSpicy;
 public class excute {
 
 	public static void main(String[] args) {
-		dailyEvent de = new dailyEvent();
-		int[] de1 = {5, 1, 9, 8, 10, 5};
-		int[] de2 = {10, 1, 10, 1, 1, 4, 3, 10};
-		System.out.println(de.solution(de1,3));
+		newId ni = new newId();
+		String ni1 = "...!@BaT#*..y.abcdefghijklm";
+		String ni2 = "z-+.^.";
+		String ni3 = "=.=";
+		String ni4 = "123_.def";
+		String ni5 = "abcdefghijklmn.p";
+		System.out.println(ni.solution(ni1)); // "bat.y.abcdefghi"
 		System.out.println("----------------");
-		System.out.println(de.solution(de2,6));
+		System.out.println(ni.solution(ni2)); // 	"z--"
+		System.out.println("----------------");
+		System.out.println(ni.solution(ni3)); // "aaa"
+		System.out.println("----------------");
+		System.out.println(ni.solution(ni4)); // "123_.def"
+		System.out.println("----------------");
+		System.out.println(ni.solution(ni5)); // "abcdefghijklmn"
+		System.out.println("----------------");
+		
+//		putNumberMatrix pnm = new putNumberMatrix();
+//		System.out.println(pnm.solution(5,3)); // 5,2
+//		System.out.println("----------------");
+//		System.out.println(pnm.solution(4,1)); // 3,2
+//		System.out.println("----------------");
+//		System.out.println(pnm.solution(3,10)); // 2,1
+//		System.out.println("----------------");
+		
+//		dupScore ds = new dupScore();
+//		String[] ds1 = {"0001 3 95", "0001 5 90", "0001 5 100", "0002 3 95", "0001 7 80", "0001 8 80", "0001 10 90", "0002 10 90", "0002 7 80", "0002 8 80", "0002 5 100", "0003 99 90"};
+//		String[] ds2 = {"1901 1 100", "1901 2 100", "1901 4 100", "1901 7 100", "1901 8 100", "1902 2 100", "1902 1 100", "1902 7 100", "1902 4 100", "1902 8 100", "1903 8 100", "1903 7 100", "1903 4 100", "1903 2 100", "1903 1 100", "1101 1 95", "1101 2 100", "1101 4 100", "1101 7 100", "1101 9 100", "1102 1 95", "1102 2 100", "1102 4 100", "1102 7 100", "1102 9 100"};
+//		String[] ds3 = {"1901 10 50", "1909 10 50"};
+//		System.out.println(ds.solution(ds1)); // ["0001", "0002"]
+//		System.out.println("----------------");
+//		System.out.println(ds.solution(ds2)); // ["1101", "1102", "1901", "1902", "1903"]
+//		System.out.println("----------------");
+//		System.out.println(ds.solution(ds3)); // ["None"]
+//		System.out.println("----------------");
+		
+//		giveCoupon gc = new giveCoupon();
+//		String[] gc1 = {"A B C D", "A D", "A B D", "B D"};
+//		int gc11 = 2;
+//		String[] gc2 = {"JAY", "JAY ELLE JAY MAY", "MAY ELLE MAY", "ELLE MAY", "ELLE ELLE ELLE", "MAY"};
+//		int gc22 = 3;
+//		System.out.println(gc.solution(gc1, gc11));
+//		System.out.println("----------------");
+//		System.out.println(gc.solution(gc2, gc22));
+//		System.out.println("----------------");
+		
+//		lottoBestWorst lbw = new lottoBestWorst();
+//		int[] lbw1 = {44, 1, 0, 0, 31, 25};
+//		int[] lbw11 = {31, 10, 45, 1, 6, 19};//[3, 5]
+//		int[] lbw2 = {0, 0, 0, 0, 0, 0};
+//		int[] lbw22 = {38, 19, 20, 40, 15, 25};//[1, 6]
+//		int[] lbw3 = {45, 4, 35, 20, 3, 9};
+//		int[] lbw33 = {20, 9, 3, 45, 4, 35};//[1, 1]
+//		System.out.println(Arrays.toString(lbw.solution(lbw1, lbw11)));
+//		System.out.println("----------------");
+//		System.out.println(Arrays.toString(lbw.solution(lbw2, lbw22)));
+//		System.out.println("----------------");
+//		System.out.println(Arrays.toString(lbw.solution(lbw3, lbw33)));
+//		System.out.println("----------------");
+		
+//		stringtoInteger si = new stringtoInteger();
+//		String si1 = "one4seveneight";
+//		String si2 = "23four5six7";
+//		String si3 = "2three45sixseven";
+//		String si4 = "123";
+//		System.out.println(si.solution(si1));
+//		System.out.println("----------------");
+//		System.out.println(si.solution(si2));
+//		System.out.println("----------------");
+//		System.out.println(si.solution(si3));
+//		System.out.println("----------------");
+//		System.out.println(si.solution(si4));
+				
+//		dailyEvent de = new dailyEvent();
+//		int[] de1 = {5, 1, 9, 8, 10, 5};
+//		int[] de2 = {10, 1, 10, 1, 1, 4, 3, 10};
+//		System.out.println(de.solution(de1,3));
+//		System.out.println("----------------");
+//		System.out.println(de.solution(de2,6));
 		
 //		giftCard gc = new giftCard();
 //		int[] gc1 = {4, 5, 3, 2, 1};
