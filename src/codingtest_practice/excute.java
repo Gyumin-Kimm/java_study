@@ -9,9 +9,11 @@ import codingtest_practice.Hash.putNumberMatrix;
 import codingtest_practice.Hash.stringtoInteger;
 import codingtest_practice.basic.cpTest;
 import codingtest_practice.basic.dailyEvent;
+import codingtest_practice.basic.functionDeploy;
 import codingtest_practice.basic.giftCard;
 import codingtest_practice.basic.newId;
 import codingtest_practice.basic.robotMake;
+import codingtest_practice.basic.sumExceptNumber;
 import codingtest_practice.basic.train;
 import codingtest_practice.greedy.lottoBestWorst;
 import codingtest_practice.greedy.makeBigNumber;
@@ -21,22 +23,43 @@ import codingtest_practice.heap.moreSpicy;
 public class excute {
 
 	public static void main(String[] args) {
-		newId ni = new newId();
-		String ni1 = "...!@BaT#*..y.abcdefghijklm";
-		String ni2 = "z-+.^.";
-		String ni3 = "=.=";
-		String ni4 = "123_.def";
-		String ni5 = "abcdefghijklmn.p";
-		System.out.println(ni.solution(ni1)); // "bat.y.abcdefghi"
+		functionDeploy fd = new functionDeploy();
+//		int[] fd1 = {93, 30, 55};
+//		int[] fd11 = {1, 30, 5};
+
+		int[] fd1 = {40, 93, 30, 55, 60, 65};
+		int[] fd11 = {60, 1, 30, 5, 10, 7};
+		int[] fd2 = {95, 90, 99, 99, 80, 99};
+		int[] fd22 = {1, 1, 1, 1, 1, 1};
+		System.out.println(Arrays.toString(fd.solution(fd1, fd11)));
 		System.out.println("----------------");
-		System.out.println(ni.solution(ni2)); // 	"z--"
+		System.out.println(Arrays.toString(fd.solution(fd2, fd22)));
 		System.out.println("----------------");
-		System.out.println(ni.solution(ni3)); // "aaa"
-		System.out.println("----------------");
-		System.out.println(ni.solution(ni4)); // "123_.def"
-		System.out.println("----------------");
-		System.out.println(ni.solution(ni5)); // "abcdefghijklmn"
-		System.out.println("----------------");
+		
+//		sumExceptNumber sen = new sumExceptNumber();
+//		int[] sen1 = {1, 2, 3, 4, 6, 7, 8, 0};
+//		int[] sen2 = {5, 8, 4, 0, 6, 7, 9};
+//		System.out.println(sen.solution(sen1));
+//		System.out.println("----------------");
+//		System.out.println(sen.solution(sen2));
+//		System.out.println("----------------");
+		
+//		newId ni = new newId();
+//		String ni1 = "...!@BaT#*..y.abcdefghijklm";
+//		String ni2 = "z-+.^.";
+//		String ni3 = "=.=";
+//		String ni4 = "123_.def";
+//		String ni5 = "abcdefghijklmn.p";
+//		System.out.println(ni.solution(ni1)); // "bat.y.abcdefghi"
+//		System.out.println("----------------");
+//		System.out.println(ni.solution(ni2)); // 	"z--"
+//		System.out.println("----------------");
+//		System.out.println(ni.solution(ni3)); // "aaa"
+//		System.out.println("----------------");
+//		System.out.println(ni.solution(ni4)); // "123_.def"
+//		System.out.println("----------------");
+//		System.out.println(ni.solution(ni5)); // "abcdefghijklmn"
+//		System.out.println("----------------");
 		
 //		putNumberMatrix pnm = new putNumberMatrix();
 //		System.out.println(pnm.solution(5,3)); // 5,2
